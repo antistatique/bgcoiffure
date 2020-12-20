@@ -32,16 +32,37 @@
     }
     .logo{
       position: absolute;
-      top: 7vmax;
+      top: 2vmax;
       width: 100%;
-      text-align: center;
+      text-align: left;
+      margin-left: 2vmax;
       z-index:20;
     }
     .logo svg{
       border: 25px solid #ffffff55;
-      min-width: 220px;
-      max-width: 30vw;
+      min-width: 120px;
+      max-width: 21vw;
       
+    }
+    .contact-cta a{
+      position: fixed;
+      z-index:99;
+      top:0em;
+      right:2em;
+      font-size: 1.5em;
+      background-color: #ffffff;
+      padding: 0.5em 0.5em 0.4em 0.5em;
+      display: inline-block;
+      margin: 2em 0;
+      color: #164C52;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.1s ease-in-out;
+      box-shadow: 3px 3px 8px #00000044;
+    }
+    .contact-cta a:hover{
+      background-color: #164C52;
+      color:#fff;
     }
     .diag{
       width: 0;
@@ -60,12 +81,75 @@
     .content-bg{
       max-width: 1000px;
     }
+    .grid-layout{
+      position: relative;
+      margin: -150px 20px 20px;
+      z-index: 90;
+      background-color: #ffffff99;
+      padding: 2em;
+    }
+    @media screen and (min-width: 992px) {
+      .grid-layout{
+        background-color: transparent;
+        margin: 0;
+        margin-top:-30vmax;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 2em repeat(7, 1fr) 2em;
+        grid-template-rows: repeat(8, auto);
+        gap: 3em 0px;
+        grid-template-areas:
+          ". . . . . . . . ."
+          ". . . . . . . . ."
+          ". . . . . . . . ."
+          ". . . . . . . . ."
+          ". . . . . . . . .";
+      }
+      .intro{
+        background-color: #ffffff99;
+        grid-area: 1 / 5 / 2 / 9; 
+        padding: 1em 3em;
+      }
+      .services{
+       grid-area: 2 / 2 / 3 / 5; 
+      }
+      .situation{
+        grid-area: 4 / 2 / 5 / 9; 
+      }
+      .rdv{
+        grid-area: 6 / 2 / 8 / 9; 
+      }
+      .grid-layout img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+      .image_1{
+        grid-area: 2 / 6 / 3 / 9;  
+      }
+      .image_2{
+        grid-area: 3 / 2 / 4 / 6;   
+      }
+      .image_3{
+        grid-area: 3 / 6 / 4 / 9;   
+      }
+      .image_4{
+        grid-area: 8 / 2 / 9 / 6; 
+      }
+      .image_5{
+        grid-area: 8 / 6 / 9 / 9; 
+      }
+    }
 	</style>
 
   </head>
   <body class="system-sans-serif avenir">
+    <div class="contact-cta">
+      <a class="white" href="tel:0041763292913">☎︎ 076&nbsp;329&nbsp;29&nbsp;13</a>
+    </div>
     <div class="header">
-      <img src="./barber.jpg" class="header-photo"/>
+      <img src="assets/img/bacem_photo_3.jpg" class="header-photo" alt="Bacem coupe monsieur">
+      
       <div class="logo">
         <svg viewBox="0 0 450 450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <title>BGCoiffure logo</title>
@@ -89,16 +173,49 @@
                 </g>
             </g>
         </svg>
+
       </div>
       <div class="diag">
       </div>
     </div>
-    <div class="pa3 pa5-ns content-bg">
-      <h1 class="lh-title f2 f-subheadline-l measure center times">Bienvenue chez BG&nbsp;coiffure</h1>
-      <p class="lh-copy f5 f3-m f1-l measure center">
-      Doté d'une expérience de 17 ans, BG coiffure saura vous convaincre par son professionnalisme et son accueil chaleureux.
-      </p>
-    </div>  
+    <div class="grid-layout">
+      <div class="intro">
+        <h1 class="lh-title f2 f-subheadline-l times">Bienvenue chez BG&nbsp;coiffure</h1>
+        <p class="lh-copy f5 f3-m f1-l">
+        Doté d'une expérience de 17 ans, BG coiffure saura vous convaincre par son professionnalisme et son accueil chaleureux.
+        </p> 
+      </div>
+      <div class="services">    
+        <h2 class="f3 f-subheadline-l times">A votre service</h2>
+        <p class="f1-l">
+        Que vous recherchiez une coupe de cheveux ou une barbe bien taillée, nous sommes à votre service afin de répondre à vos demandes et besoins.
+        </p>
+        <ul class="f1-l">  
+          <li>Coupe Homme</li>
+          <li>Taille de la barbe</li>
+          <li>Soin du visage</li>
+          <li>Au centre de Lausanne</li>
+        </ul>
+      </div>
+      
+      <div class="situation">  
+        <p class="f1-l">
+        C’est au coeur de Lausanne que votre salon BG coiffure est situé. Au deuxième d’étage de la Rue du Tunnel 1 BG coiffure est idéalement situé, notre salon ce trouve entre la Place de la Riponne et la Place du Tunnel en ville de Lausanne.
+        </p>
+      </div>
+      
+      <div class="rdv">        
+        <h2 class="f3 f-subheadline-l times">Prenez rendez-vous</h2>
+        <p class="f1-l">
+        Nous serions ravi de vous accueillir. <br/>Pour votre prochain rende-vous, vous pouvez nous contacter au&nbsp;<a href="tel:0041763292913">+41&nbsp;76&nbsp;329&nbsp;29&nbsp;13</a>
+        </p>
+      </div>
+      <img src="assets/img/bacem_photo_2.jpg" alt="Produits et rasoir" class="image_1"/>
+      <img src="assets/img/bacem_photo_1.jpg" alt="Photo du salon" class="image_2"/>
+      <img src="assets/img/bacem_photo_4.jpg" alt="Bacem coupe monsieur ciseaux gros plan" class="image_3"/>
+      <img src="assets/img/bacem_photo_5.jpg" alt="Bacem coupe monsieur rasoir" class="image_4"/>
+      <img src="assets/img/bacem_photo_6.jpg" alt="Cartes de visite BG coiffure" class="image_5"/>
+    </div>
       
     <div class="footer-contact">
       <div class="pa3 pa5-ns content-bg">
