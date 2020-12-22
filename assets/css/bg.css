@@ -18,7 +18,7 @@
 }
 
 html{
-	  font-size: 16px;
+	  font-size: 18px;
 	}
 body{
   font-family: poppins,-apple-system,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
@@ -148,32 +148,30 @@ ul ul, ol ol, ul ol, ol ul {
 }
 .logo{
   position: absolute;
-  top: 2vmax;
-  width: 100%;
+  top:40px;
   text-align: left;
-  margin-left: 2vmax;
+  left: 2vmax;
   z-index:20;
 }
 .logo svg{
   border: 25px solid #ffffff55;
   min-width: 120px;
-  max-width: 12vw;
-  
+  max-width: 15vw;
+  min-height: 120px;
+  max-height: 15vw;
 }
 .contact-cta a{
   position: fixed;
   z-index:99;
-  top:0em;
-  right:2em;
-  margin: 2em 0;
-  
+  top:40px;
+  right:2em; 
 }
 .btn:hover{
   background-color: #164C52;
   color:#fff;
 }
 .btn{
-	font-size: 1.5em;
+	font-size: 1.2em;
 	background-color: #ffffff;
 	padding: 0.5em 0.5em 0.4em 0.5em;
 	display: inline-block;
@@ -182,10 +180,10 @@ ul ul, ol ol, ul ol, ol ul {
 	text-decoration: none;
 	transition: all 0.1s ease-in-out;
 	box-shadow: 3px 3px 8px #00000044;	
+  margin-right: 0.6em;
+  margin-top: 0.6em;
 }
-.btn + .btn{
-	margin-left: 0.5em;
-}
+
 .btn:active{
 	box-shadow: 3px 3px 3px #00000044;
 }
@@ -207,13 +205,8 @@ ul ul, ol ol, ul ol, ol ul {
   bottom: 0;
   z-index:10;
 }
-.footer-contact{
-  background-color: #164C52;
-  width: 100%;
-}
-.content-bg{
-  max-width: 1000px;
-}
+
+
 .grid-layout{
   position: relative;
   margin: -150px 20px 20px;
@@ -225,7 +218,8 @@ ul ul, ol ol, ul ol, ol ul {
 .grid-layout img{
   max-width: 100%;
   min-height: 20vh;
-  margin: 1em 0;
+  max-height: 40vh;
+  margin: 4em 0;
   display: block;
 }
 
@@ -236,7 +230,7 @@ ul ul, ol ol, ul ol, ol ul {
 	margin-top:-10vmax;
 	padding: 0;
 	display: grid;
-	grid-template-columns: 0.5em repeat(7, 1fr) 0.5em;
+	grid-template-columns: 0.4em repeat(7, 1fr) 0.4em;
 	grid-template-rows: repeat(8, auto);
 	gap: 3em 0px;
 	grid-template-areas:
@@ -252,18 +246,26 @@ ul ul, ol ol, ul ol, ol ul {
 	padding: 1em 3em;
   }
   .services{
-   grid-area: 2 / 2 / 3 / 5; 
+  grid-area: 2 / 2 / 3 / 5; 
+  padding: 2em;
   }
   .situation{
 	grid-area: 4 / 2 / 5 / 9; 
+  padding: 2em;
   }
   .rdv{
 	grid-area: 6 / 2 / 8 / 9; 
+  padding: 2em;
+  }
+  .tarifs{
+  grid-area: 5 / 2 / 6 / 9;  
+  padding: 2em; 
   }
   .grid-layout img{
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
+  margin: 0;
   }
   .image_2{
 	grid-area: 2 / 6 / 3 / 9;  
